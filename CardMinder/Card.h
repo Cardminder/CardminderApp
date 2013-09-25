@@ -12,6 +12,6 @@
 
 @property NSString *name;
 @property NSString *cardType;
-@property int icon; 
+@property int icon;
 
 @end
