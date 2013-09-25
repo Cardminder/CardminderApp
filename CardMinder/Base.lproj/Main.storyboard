@@ -472,16 +472,7 @@
     </scenes>
     <resources>
         <image name="discover.png" width="81" height="40"/>
-        <image name="discover.png" width="81" height="40"/>
-        <image name="discover.png" width="81" height="40"/>
-        <image name="discover.png" width="81" height="40"/>
         <image name="mastercard.png" width="81" height="40"/>
-        <image name="mastercard.png" width="81" height="40"/>
-        <image name="mastercard.png" width="81" height="40"/>
-        <image name="mastercard.png" width="81" height="40"/>
-        <image name="visa1.png" width="81" height="40"/>
-        <image name="visa1.png" width="81" height="40"/>
-        <image name="visa1.png" width="81" height="40"/>
         <image name="visa1.png" width="81" height="40"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
