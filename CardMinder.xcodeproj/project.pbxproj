@@ -21,6 +21,12 @@
 		94D2756917F13DCF00D56D3C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D2754B17F13DCF00D56D3C /* UIKit.framework */; };
 		94D2757117F13DCF00D56D3C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 94D2756F17F13DCF00D56D3C /* InfoPlist.strings */; };
 		94D2757317F13DCF00D56D3C /* CardMinderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D2757217F13DCF00D56D3C /* CardMinderTests.m */; };
+		94D2758117F209EA00D56D3C /* CardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D2758017F209EA00D56D3C /* CardViewController.m */; };
+		94D2758417F20C4100D56D3C /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D2758317F20C4100D56D3C /* Card.m */; };
+		94D2758A17F22DC400D56D3C /* visa1.png in Resources */ = {isa = PBXBuildFile; fileRef = 94D2758917F22DC400D56D3C /* visa1.png */; };
+		94D2758F17F22F7C00D56D3C /* discover.png in Resources */ = {isa = PBXBuildFile; fileRef = 94D2758D17F22F7C00D56D3C /* discover.png */; };
+		94D2759017F22F7C00D56D3C /* mastercard.png in Resources */ = {isa = PBXBuildFile; fileRef = 94D2758E17F22F7C00D56D3C /* mastercard.png */; };
+		94D2759417F359F000D56D3C /* TZAddCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D2759317F359F000D56D3C /* TZAddCardViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +59,15 @@
 		94D2756E17F13DCF00D56D3C /* CardMinderTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CardMinderTests-Info.plist"; sourceTree = "<group>"; };
 		94D2757017F13DCF00D56D3C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		94D2757217F13DCF00D56D3C /* CardMinderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CardMinderTests.m; sourceTree = "<group>"; };
+		94D2757F17F209EA00D56D3C /* CardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardViewController.h; path = ../CardViewController.h; sourceTree = "<group>"; };
+		94D2758017F209EA00D56D3C /* CardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CardViewController.m; path = ../CardViewController.m; sourceTree = "<group>"; };
+		94D2758217F20C4100D56D3C /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
+		94D2758317F20C4100D56D3C /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
+		94D2758917F22DC400D56D3C /* visa1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = visa1.png; sourceTree = "<group>"; };
+		94D2758D17F22F7C00D56D3C /* discover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = discover.png; sourceTree = "<group>"; };
+		94D2758E17F22F7C00D56D3C /* mastercard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mastercard.png; sourceTree = "<group>"; };
+		94D2759217F359F000D56D3C /* TZAddCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZAddCardViewController.h; sourceTree = "<group>"; };
+		94D2759317F359F000D56D3C /* TZAddCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZAddCardViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,9 +127,16 @@
 		94D2754D17F13DCF00D56D3C /* CardMinder */ = {
 			isa = PBXGroup;
 			children = (
+				94D2759117F356FA00D56D3C /* images */,
 				94D2755617F13DCF00D56D3C /* TZAppDelegate.h */,
 				94D2755717F13DCF00D56D3C /* TZAppDelegate.m */,
 				94D2755917F13DCF00D56D3C /* Main.storyboard */,
+				94D2759217F359F000D56D3C /* TZAddCardViewController.h */,
+				94D2759317F359F000D56D3C /* TZAddCardViewController.m */,
+				94D2758217F20C4100D56D3C /* Card.h */,
+				94D2758317F20C4100D56D3C /* Card.m */,
+				94D2757F17F209EA00D56D3C /* CardViewController.h */,
+				94D2758017F209EA00D56D3C /* CardViewController.m */,
 				94D2755C17F13DCF00D56D3C /* TZViewController.h */,
 				94D2755D17F13DCF00D56D3C /* TZViewController.m */,
 				94D2755F17F13DCF00D56D3C /* Images.xcassets */,
@@ -150,6 +172,16 @@
 				94D2756F17F13DCF00D56D3C /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		94D2759117F356FA00D56D3C /* images */ = {
+			isa = PBXGroup;
+			children = (
+				94D2758D17F22F7C00D56D3C /* discover.png */,
+				94D2758E17F22F7C00D56D3C /* mastercard.png */,
+				94D2758917F22DC400D56D3C /* visa1.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +263,9 @@
 			files = (
 				94D2756017F13DCF00D56D3C /* Images.xcassets in Resources */,
 				94D2755217F13DCF00D56D3C /* InfoPlist.strings in Resources */,
+				94D2758A17F22DC400D56D3C /* visa1.png in Resources */,
+				94D2759017F22F7C00D56D3C /* mastercard.png in Resources */,
+				94D2758F17F22F7C00D56D3C /* discover.png in Resources */,
 				94D2755B17F13DCF00D56D3C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,6 +285,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94D2758417F20C4100D56D3C /* Card.m in Sources */,
+				94D2758117F209EA00D56D3C /* CardViewController.m in Sources */,
+				94D2759417F359F000D56D3C /* TZAddCardViewController.m in Sources */,
 				94D2755817F13DCF00D56D3C /* TZAppDelegate.m in Sources */,
 				94D2755417F13DCF00D56D3C /* main.m in Sources */,
 				94D2755E17F13DCF00D56D3C /* TZViewController.m in Sources */,
