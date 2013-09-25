@@ -11,7 +11,7 @@
 @interface Card : NSObject
 
 @property NSString *name;
-@property NSString *cardType;
+@property NSString *cardType; 
 @property int icon;
 
 @end
