@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TZAddCardViewController : UIViewController
+@interface TZAddCardViewController : UIViewController <UITextFieldDelegate, UIActionSheetDelegate>
+@property (weak, nonatomic) IBOutlet UITextField *nameField;
+@property (weak, nonatomic) IBOutlet UIButton *selectIcon;
 
 @end
