@@ -27,6 +27,7 @@
 		94D2758F17F22F7C00D56D3C /* discover.png in Resources */ = {isa = PBXBuildFile; fileRef = 94D2758D17F22F7C00D56D3C /* discover.png */; };
 		94D2759017F22F7C00D56D3C /* mastercard.png in Resources */ = {isa = PBXBuildFile; fileRef = 94D2758E17F22F7C00D56D3C /* mastercard.png */; };
 		94D2759417F359F000D56D3C /* TZAddCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D2759317F359F000D56D3C /* TZAddCardViewController.m */; };
+		94FE61A217F640020068C4CD /* TZIconCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94FE61A117F640020068C4CD /* TZIconCollectionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,8 @@
 		94D2758E17F22F7C00D56D3C /* mastercard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mastercard.png; sourceTree = "<group>"; };
 		94D2759217F359F000D56D3C /* TZAddCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZAddCardViewController.h; sourceTree = "<group>"; };
 		94D2759317F359F000D56D3C /* TZAddCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZAddCardViewController.m; sourceTree = "<group>"; };
+		94FE61A017F640020068C4CD /* TZIconCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZIconCollectionViewController.h; sourceTree = "<group>"; };
+		94FE61A117F640020068C4CD /* TZIconCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZIconCollectionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,9 +131,14 @@
 			isa = PBXGroup;
 			children = (
 				94D2759117F356FA00D56D3C /* images */,
+				94D2758D17F22F7C00D56D3C /* discover.png */,
+				94D2758E17F22F7C00D56D3C /* mastercard.png */,
+				94D2758917F22DC400D56D3C /* visa1.png */,
 				94D2755617F13DCF00D56D3C /* TZAppDelegate.h */,
 				94D2755717F13DCF00D56D3C /* TZAppDelegate.m */,
 				94D2755917F13DCF00D56D3C /* Main.storyboard */,
+				94FE61A017F640020068C4CD /* TZIconCollectionViewController.h */,
+				94FE61A117F640020068C4CD /* TZIconCollectionViewController.m */,
 				94D2759217F359F000D56D3C /* TZAddCardViewController.h */,
 				94D2759317F359F000D56D3C /* TZAddCardViewController.m */,
 				94D2758217F20C4100D56D3C /* Card.h */,
@@ -177,9 +185,6 @@
 		94D2759117F356FA00D56D3C /* images */ = {
 			isa = PBXGroup;
 			children = (
-				94D2758D17F22F7C00D56D3C /* discover.png */,
-				94D2758E17F22F7C00D56D3C /* mastercard.png */,
-				94D2758917F22DC400D56D3C /* visa1.png */,
 			);
 			name = images;
 			sourceTree = "<group>";
@@ -287,6 +292,7 @@
 			files = (
 				94D2758417F20C4100D56D3C /* Card.m in Sources */,
 				94D2758117F209EA00D56D3C /* CardViewController.m in Sources */,
+				94FE61A217F640020068C4CD /* TZIconCollectionViewController.m in Sources */,
 				94D2759417F359F000D56D3C /* TZAddCardViewController.m in Sources */,
 				94D2755817F13DCF00D56D3C /* TZAppDelegate.m in Sources */,
 				94D2755417F13DCF00D56D3C /* main.m in Sources */,
@@ -499,6 +505,7 @@
 				94D2757817F13DCF00D56D3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		94D2757917F13DCF00D56D3C /* Build configuration list for PBXNativeTarget "CardMinderTests" */ = {
 			isa = XCConfigurationList;
@@ -507,6 +514,7 @@
 				94D2757B17F13DCF00D56D3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

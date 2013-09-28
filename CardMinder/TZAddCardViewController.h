@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TZAddCardViewController : UIViewController <UITextFieldDelegate, UIActionSheetDelegate>
+@interface TZAddCardViewController : UIViewController <UITextFieldDelegate, UIActionSheetDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
 @property (weak, nonatomic) IBOutlet UIButton *selectIcon;
+@property (nonatomic, retain) UIImageView *selectedIcon;
+@property (strong, nonatomic) IBOutlet UIImageView *iconView;
+
 
 @end

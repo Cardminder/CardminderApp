@@ -10,33 +10,76 @@
 #import "TZAddCardViewController.h"
 
 @interface TZAddCardViewController ()
+{
+    UIImagePickerController *mediaPicker;
+    IBOutlet UIImageView *iconView;
+}
 - (IBAction)showActionSheet:(id)sender;
+
 @end
 
 @implementation TZAddCardViewController
+
+@synthesize iconView;
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    UIImage *chosenIcon = [info objectForKey:UIImagePickerControllerEditedImage];
+    if (!chosenIcon)
+    {
+        chosenIcon = [info objectForKey:UIImagePickerControllerOriginalImage];
+    }
+    if (chosenIcon) {
+        self.iconView.image = chosenIcon;
+    }
+    
+    [picker dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    [picker dismissViewControllerAnimated:YES completion:nil];
+}
+
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     NSString *buttonTitle = [actionSheet buttonTitleAtIndex:buttonIndex];
     if ([buttonTitle isEqualToString:@"Choose Existing Icon"])
     {
-        NSLog(@"Choose Existing Icon Pressed");
+        mediaPicker = [[UIImagePickerController alloc] init];
+        mediaPicker.delegate = self;
+        mediaPicker.allowsEditing = YES;
+        mediaPicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+
     }
-    if ([buttonTitle isEqualToString:@"Take a Picture"])
+    if ([buttonTitle isEqualToString:@"Take Photo"])
     {
-        NSLog(@"Take a picture pressed");
+        if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+            mediaPicker = [[UIImagePickerController alloc] init];
+            mediaPicker.delegate = self;
+            mediaPicker.allowsEditing = YES;
+            mediaPicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+        }
+
     }
-    if ([buttonTitle isEqualToString:@"Cancel"])
-    {
-        NSLog(@"Cancel button pressed");
-    }
+   
+    [self presentViewController:mediaPicker animated:YES completion:nil];
+    
+
 }
+
+
+/*- (IBAction)showMoreIcons:(id)sender
+{
+    //[self.navigationController ;
+}*/
 
 - (IBAction)showActionSheet:(id)sender
 {
     NSString *actionSheetTitle = @"Choose Icon";
     NSString *icon = @"Choose Existing Icon";
-    NSString *pic = @"Take a picture";
+    NSString *pic = @"Take Photo";
     NSString *cancel = @"Cancel";
     UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:actionSheetTitle delegate:self cancelButtonTitle:cancel destructiveButtonTitle:nil otherButtonTitles:icon, pic, nil];
     [actionSheet showInView:self.view];
