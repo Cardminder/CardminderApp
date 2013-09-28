@@ -52,6 +52,8 @@
         mediaPicker.allowsEditing = YES;
         mediaPicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
 
+        [self presentViewController:mediaPicker animated:YES completion:nil];
+
     }
     if ([buttonTitle isEqualToString:@"Take Photo"])
     {
@@ -61,10 +63,15 @@
             mediaPicker.allowsEditing = YES;
             mediaPicker.sourceType = UIImagePickerControllerSourceTypeCamera;
         }
+        
+        [self presentViewController:mediaPicker animated:YES completion:nil];
 
     }
+    if ([buttonTitle isEqualToString:@"Cancel"]) {
+        
+    }
    
-    [self presentViewController:mediaPicker animated:YES completion:nil];
+    
     
 
 }
@@ -83,6 +90,7 @@
     NSString *cancel = @"Cancel";
     UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:actionSheetTitle delegate:self cancelButtonTitle:cancel destructiveButtonTitle:nil otherButtonTitles:icon, pic, nil];
     [actionSheet showInView:self.view];
+
 }
 
 - (IBAction)popToRoot:(id)sender {
