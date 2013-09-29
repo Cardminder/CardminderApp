@@ -16,6 +16,12 @@
 
 @implementation TZIconCollectionViewController
 
+- (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSString *selectedIcon = [icons[indexPath.section] objectAtIndex:indexPath.row];
+    
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];

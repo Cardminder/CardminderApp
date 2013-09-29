@@ -10,6 +10,6 @@
 
 @interface CardViewController : UITableViewController
 
-@property NSMutableArray *cards;
+@property (nonatomic, retain) NSMutableArray *cards;
 
 @end

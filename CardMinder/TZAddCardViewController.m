@@ -7,12 +7,15 @@
 //
 
 #import "Card.h"
+#import "CardViewController.h"
 #import "TZAddCardViewController.h"
 
 @interface TZAddCardViewController ()
 {
     UIImagePickerController *mediaPicker;
     IBOutlet UIImageView *iconView;
+    UIImage *chosenIcon;
+    NSString *cardTypeString;
 }
 - (IBAction)showActionSheet:(id)sender;
 
@@ -22,9 +25,42 @@
 
 @synthesize iconView;
 
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+{
+    return 1;
+}
+
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
+{
+    return [self.cardTypeArray count];
+}
+
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
+{
+    return [self.cardTypeArray objectAtIndex:row];
+}
+
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
+{
+    switch (row) {
+        case 0:
+            self.type.text = @"Credit Card";
+            cardTypeString = @"Credit Card";
+            break;
+        case 1:
+            self.type.text = @"Debit Card";
+            cardTypeString = @"Debit Card";
+            break;
+        case 2:
+            self.type.text = @"Gift Card";
+            cardTypeString = @"Gift Card";
+            break;
+    }
+}
+
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
-    UIImage *chosenIcon = [info objectForKey:UIImagePickerControllerEditedImage];
+    chosenIcon = [info objectForKey:UIImagePickerControllerEditedImage];
     if (!chosenIcon)
     {
         chosenIcon = [info objectForKey:UIImagePickerControllerOriginalImage];
@@ -62,18 +98,12 @@
             mediaPicker.delegate = self;
             mediaPicker.allowsEditing = YES;
             mediaPicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+
         }
         
         [self presentViewController:mediaPicker animated:YES completion:nil];
 
     }
-    if ([buttonTitle isEqualToString:@"Cancel"]) {
-        
-    }
-   
-    
-    
-
 }
 
 
@@ -105,6 +135,13 @@
     
     Card *newCard = [[Card alloc] init];
     newCard.name = cardName;
+    newCard.icon = chosenIcon;
+    newCard.cardType = cardTypeString;
+    
+    CardViewController *cardViewController = (CardViewController *)[self.navigationController.viewControllers objectAtIndex:self.navigationController.viewControllers.count-2];
+    
+    [cardViewController.cards addObject:newCard];
+    [self.navigationController popToRootViewControllerAnimated:YES];
     
     
 }
@@ -122,6 +159,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    self.cardTypeArray = [[NSArray alloc] initWithObjects:@"Credit Card", @"Debit Card", @"Gift Card", nil];
     
 }
 

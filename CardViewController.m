@@ -17,8 +17,6 @@
 
 @synthesize cards;
 
-
-
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -75,6 +73,12 @@
     return nil;
 }
 
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [cards removeObjectAtIndex:indexPath.row];
+    [tableView reloadData];
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CardCell"];
@@ -84,10 +88,17 @@
     UILabel *typeLabel = (UILabel *) [cell viewWithTag:101];
     typeLabel.text = card.cardType;
     UIImageView * cardImageView = (UIImageView *) [cell viewWithTag:102];
-    cardImageView.image = [self imageForCard:card.icon];
+    //cardImageView.image = [self imageForCard:card.icon];
     
     
     return cell;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
+    
 }
 
 /*
