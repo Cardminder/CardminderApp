@@ -32,7 +32,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="aie-en-Syn">
-                            <rect key="frame" x="0.0" y="206" width="320" height="44"/>
+                            <rect key="frame" x="0.0" y="216" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="Add Card">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -71,27 +71,27 @@
                                     <segue destination="fUy-dB-ROM" kind="push" id="8fo-VO-LxB"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="CheckedOutCell" id="gWg-uv-L1h">
-                                <rect key="frame" x="0.0" y="151" width="320" height="55"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="CheckedOutCell" rowHeight="65" id="gWg-uv-L1h">
+                                <rect key="frame" x="0.0" y="151" width="320" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gWg-uv-L1h" id="ffD-Ac-Dti">
-                                    <rect key="frame" x="0.0" y="0.0" width="287" height="54"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="64"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="103" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Wl9-HC-kfx">
-                                            <rect key="frame" x="161" y="7" width="88" height="21"/>
+                                            <rect key="frame" x="161" y="12" width="88" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Type" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="P0b-6G-n3u">
-                                            <rect key="frame" x="161" y="26" width="78" height="21"/>
+                                            <rect key="frame" x="161" y="31" width="78" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" tag="105" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="oXv-VZ-Ncp">
-                                            <rect key="frame" x="20" y="7" width="81" height="40"/>
+                                            <rect key="frame" x="20" y="12" width="81" height="40"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                     </subviews>
@@ -107,14 +107,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="All Cards (Home)" id="2kf-FC-t2K">
-                        <barButtonItem key="leftBarButtonItem" title="Out" id="T7O-Mm-qtV">
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="Dfu-Mo-K5G">
                             <connections>
-                                <segue destination="omd-1R-hl2" kind="push" id="6D1-Yv-qvO"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="In" id="Dfu-Mo-K5G">
-                            <connections>
-                                <segue destination="3Eb-E3-VgT" kind="push" id="ru5-T6-LVd"/>
+                                <segue destination="MZb-31-zGn" kind="push" id="99m-pn-FBU"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -122,52 +117,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F3N-P1-STY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="910" y="88"/>
-        </scene>
-        <!--Card View Controller - Home (Option 2)-->
-        <scene sceneID="qxx-C4-hjx">
-            <objects>
-                <viewController id="3Eb-E3-VgT" customClass="CardViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Ww3-IE-vSo">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <containerView contentMode="scaleToFill" id="OAj-QK-g5q">
-                                <rect key="frame" x="0.0" y="108" width="320" height="188"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <connections>
-                                    <segue destination="LjY-C9-Lw3" kind="embed" id="mSw-WH-TgY"/>
-                                </connections>
-                            </containerView>
-                            <containerView contentMode="scaleToFill" id="r19-B5-tbc">
-                                <rect key="frame" x="0.0" y="336" width="320" height="232"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <connections>
-                                    <segue destination="kXA-OT-kr8" kind="embed" id="HXw-tb-dQj"/>
-                                </connections>
-                            </containerView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Checked Out" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xP4-QA-EWL">
-                                <rect key="frame" x="20" y="307" width="138" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cards Not Checked In" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="czq-3Y-qcj">
-                                <rect key="frame" x="20" y="79" width="171" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Home (Option 2)" id="7A2-iZ-OeI"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4wc-TX-yXa" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="794" y="894"/>
         </scene>
         <!--Check Out View Controller - Check Out Card-->
         <scene sceneID="Shu-sy-qbH">
@@ -184,7 +133,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="BZx-0P-hcU">
-                                <rect key="frame" x="88" y="347" width="144" height="30"/>
+                                <rect key="frame" x="88" y="488" width="144" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.1467236556" green="0.73677394699999998" blue="0.15355379159999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Check Out!">
@@ -211,17 +160,22 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" id="FPW-dm-fL5">
+                                <rect key="frame" x="39" y="316" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Check Out Card" id="Oo1-by-Z6f"/>
                     <connections>
                         <outlet property="checkOut" destination="BZx-0P-hcU" id="H6s-TF-Tvq"/>
+                        <outlet property="mapView" destination="FPW-dm-fL5" id="fRH-NG-qM3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hZN-0Q-lgt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1360" y="644"/>
+            <point key="canvasLocation" x="1491" y="88"/>
         </scene>
         <!--Check In View Controller - Check card in-->
         <scene sceneID="42r-Cj-rxw">
@@ -268,36 +222,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SDA-x9-cvT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1800" y="644"/>
-        </scene>
-        <!--View Controller - Cards Checked Out-->
-        <scene sceneID="52Y-q0-0QJ">
-            <objects>
-                <viewController id="omd-1R-hl2" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="A5Y-Dv-doA">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Will be table view of cards out" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2fM-9M-9hn">
-                                <rect key="frame" x="36" y="187" width="231" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="that links to check in page when clicked" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bnR-iw-all">
-                                <rect key="frame" x="7" y="216" width="307" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Cards Checked Out" id="qI9-oF-80F"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CXN-6n-dnm" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1360" y="1318"/>
+            <point key="canvasLocation" x="1890" y="88"/>
         </scene>
         <!--Add Card View Controller - Add Card-->
         <scene sceneID="5p2-gl-Ixi">
@@ -386,13 +311,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Add Card" id="PoI-cJ-57e">
-                        <barButtonItem key="rightBarButtonItem" title="Edit" id="hOG-GQ-G0T">
-                            <connections>
-                                <segue destination="MZb-31-zGn" kind="push" id="TEB-Ve-4V0"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Add Card" id="PoI-cJ-57e"/>
                     <connections>
                         <outlet property="cardTypePicker" destination="yl4-j7-gnX" id="ISn-RB-QeT"/>
                         <outlet property="iconView" destination="sLX-UV-bAY" id="1Zz-Bn-9ce"/>
@@ -403,7 +322,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eIh-FI-VMd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1329" y="-589"/>
+            <point key="canvasLocation" x="910" y="751"/>
         </scene>
         <!--Icon Table View Controller - Icon Page-->
         <scene sceneID="65w-ZT-0c9">
@@ -457,7 +376,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lgg-9F-6GE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1782" y="-411"/>
+            <point key="canvasLocation" x="1491" y="751"/>
         </scene>
         <!--Edit Card View Controller - Edit Card-->
         <scene sceneID="j1v-z2-3yZ">
@@ -479,7 +398,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="rA8-kh-2JT">
+                            <textField opaque="NO" clipsSubviews="YES" tag="112" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="rA8-kh-2JT">
                                 <rect key="frame" x="63" y="116" width="189" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -506,11 +425,11 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Oua-ge-jDf">
+                            <imageView userInteractionEnabled="NO" tag="114" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Oua-ge-jDf">
                                 <rect key="frame" x="87" y="226" width="120" height="92"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="None" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kx5-VE-vlr">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="113" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="None" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kx5-VE-vlr">
                                 <rect key="frame" x="111" y="326" width="41" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -534,103 +453,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FyZ-6R-l2f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1779" y="-1089"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="nf7-ZW-aY5">
-            <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="LjY-C9-Lw3" sceneMemberID="viewController">
-                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="jMt-px-Ugg">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="188"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="vdf-Ob-o6w">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="188"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CardCell" textLabel="ZUD-NH-YiG" detailTextLabel="lkc-uS-fPu" style="IBUITableViewCellStyleSubtitle" id="rjZ-mn-n9E">
-                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rjZ-mn-n9E" id="oLo-SA-wFo">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Card Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZUD-NH-YiG">
-                                                    <rect key="frame" x="15" y="3" width="92" height="22"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Card Type" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lkc-uS-fPu">
-                                                    <rect key="frame" x="15" y="25" width="57" height="15"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <toolbarItems/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DAs-Uy-1pM" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="428" y="798"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="ZOK-Av-My7">
-            <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="kXA-OT-kr8" sceneMemberID="viewController">
-                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="f09-51-1mw">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="232"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Jqp-wa-wYL">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="232"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="Vt6-u3-5eE" detailTextLabel="pa4-sj-Ts1" style="IBUITableViewCellStyleSubtitle" id="IUA-x0-Yby">
-                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IUA-x0-Yby" id="h6Z-Ux-EGP">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Card Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Vt6-u3-5eE">
-                                                    <rect key="frame" x="15" y="3" width="92" height="22"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Card Type" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pa4-sj-Ts1">
-                                                    <rect key="frame" x="15" y="25" width="57" height="15"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <toolbarItems/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="g35-yK-g9D" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="441" y="1178"/>
+            <point key="canvasLocation" x="910" y="-591"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

@@ -7,8 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
+#import <MapKit/MapKit.h>
 
-@interface TZCheckOutViewController : UIViewController
+@interface TZCheckOutViewController : UIViewController <CLLocationManagerDelegate>
 @property (strong, nonatomic) IBOutlet UIButton *checkOut;
+@property (strong, nonatomic) CLLocationManager *locationManager;
+@property (strong, nonatomic) NSMutableArray *geoFences;
+@property (strong, nonatomic) IBOutlet MKMapView *mapView;
 
 @end
