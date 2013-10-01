@@ -9,6 +9,7 @@
 #import "Card.h"
 #import "CardViewController.h"
 #import "TZAddCardViewController.h"
+#import "TZIconTableViewController.h"
 
 @interface TZAddCardViewController ()
 {
@@ -16,6 +17,8 @@
     IBOutlet UIImageView *iconView;
     UIImage *chosenIcon;
     NSString *cardTypeString;
+    BOOL premade;
+    BOOL picture;
 }
 - (IBAction)showActionSheet:(id)sender;
 
@@ -24,6 +27,8 @@
 @implementation TZAddCardViewController
 
 @synthesize iconView;
+@synthesize iconArray;
+
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
 {
@@ -64,10 +69,13 @@
     if (!chosenIcon)
     {
         chosenIcon = [info objectForKey:UIImagePickerControllerOriginalImage];
+        
     }
     if (chosenIcon) {
         self.iconView.image = chosenIcon;
     }
+    
+    picture = YES;
     
     [picker dismissViewControllerAnimated:YES completion:nil];
 }
@@ -88,7 +96,15 @@
         mediaPicker.allowsEditing = YES;
         mediaPicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
 
+        premade = YES;
+        
         [self presentViewController:mediaPicker animated:YES completion:nil];
+        
+       
+        
+        //TZIconTableViewController *iconViewController = [[TZIconTableViewController alloc] init];
+        
+        
 
     }
     if ([buttonTitle isEqualToString:@"Take Photo"])
@@ -101,16 +117,13 @@
 
         }
         
+        picture = YES;
+        
         [self presentViewController:mediaPicker animated:YES completion:nil];
 
     }
 }
 
-
-/*- (IBAction)showMoreIcons:(id)sender
-{
-    //[self.navigationController ;
-}*/
 
 - (IBAction)showActionSheet:(id)sender
 {
@@ -135,8 +148,15 @@
     
     Card *newCard = [[Card alloc] init];
     newCard.name = cardName;
-    newCard.icon = chosenIcon;
+    newCard.cardImage = chosenIcon;
     newCard.cardType = cardTypeString;
+    if (premade) {
+        newCard.premadeIcon = YES;
+        newCard.pictureTaken = NO;
+    } if (picture) {
+        newCard.pictureTaken = YES;
+        newCard.premadeIcon = NO;
+    }
     
     CardViewController *cardViewController = (CardViewController *)[self.navigationController.viewControllers objectAtIndex:self.navigationController.viewControllers.count-2];
     

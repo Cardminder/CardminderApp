@@ -19,4 +19,7 @@
 @property (strong, nonatomic) IBOutlet UIPickerView *cardTypePicker;
 @property (strong, nonatomic) NSArray *cardTypeArray;
 
+@property (strong, nonatomic) NSMutableArray *iconArray;
+
+
 @end

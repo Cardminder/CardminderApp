@@ -11,5 +11,6 @@
 @interface CardViewController : UITableViewController
 
 @property (nonatomic, retain) NSMutableArray *cards;
+@property BOOL checkedOut;
 
 @end

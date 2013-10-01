@@ -1,22 +1,27 @@
 //
-//  CardViewController.m
+//  TZIconTableViewController.m
 //  CardMinder
 //
-//  Created by Zach Burns on 9/24/13.
+//  Created by Zach Burns on 9/29/13.
 //  Copyright (c) 2013 Burnspur. All rights reserved.
 //
 
-#import "CardViewController.h"
-#import "Card.h"
+#import "TZIconTableViewController.h"
+#import "TZAddCardViewController.h"
+#import "Icon.h"
 
-@interface CardViewController ()
+@interface TZIconTableViewController ()
 
 @end
 
-@implementation CardViewController
+@implementation TZIconTableViewController {
+   
+}
 
-@synthesize cards;
-@synthesize checkedOut;
+@synthesize premadeIcons;
+@synthesize premadeIconView;
+@synthesize premadeIconName;
+@synthesize chosenIcon;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -36,6 +41,23 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    premadeIcons = [[NSMutableArray alloc] init];
+    
+    Icon *newIcon = [[Icon alloc] init];
+    newIcon.iconName = @"Discover";
+    newIcon.iconImageNumber = 1;
+    [premadeIcons addObject:newIcon];
+    Icon *newIcon1 = [[Icon alloc] init];
+    newIcon1.iconName = @"Visa";
+    newIcon1.iconImageNumber = 2;
+    [premadeIcons addObject:newIcon1];
+    Icon *newIcon2 = [[Icon alloc] init];
+    newIcon2.iconName = @"Mastercard";
+    newIcon2.iconImageNumber = 3;
+    [premadeIcons addObject:newIcon2];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -57,16 +79,16 @@
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return [self.cards count];
+    return [premadeIcons count];
 }
 
-- (UIImage *)imageForCard:(int)cardType
+- (UIImage *)imageForIcon:(int)iconName
 {
-    switch (cardType) {
+    switch (iconName) {
         case 1:
-            return [UIImage imageNamed:@"visa1.png"];
-        case 2:
             return [UIImage imageNamed:@"discover.png"];
+        case 2:
+            return [UIImage imageNamed:@"visa1.png"];
         case 3:
             return [UIImage imageNamed:@"mastercard.png"];
             
@@ -74,74 +96,50 @@
     return nil;
 }
 
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    [cards removeObjectAtIndex:indexPath.row];
-    [tableView reloadData];
-}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-   
-    /*UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CardCell"];
-    Card *card = [self.cards objectAtIndex:indexPath.row];
-    UILabel *nameLabel = (UILabel *) [cell viewWithTag:100];
-    nameLabel.text = card.name;
-    UILabel *typeLabel = (UILabel *) [cell viewWithTag:101];
-    typeLabel.text = card.cardType;
-    UIImageView * cardImageView = (UIImageView *) [cell viewWithTag:102];
-    cardImageView.image = [self imageForCard:card.iconNumber];
-    card.checkedOut = YES;
-    UIImageView *checkedOutView = (UIImageView *) [cell viewWithTag:108];
-    if ([card checkedOut]) {
-        checkedOutView.image = [UIImage imageNamed:@"checkmark.png"];
-    } else {
-        checkedOutView.image = nil;
-    }*/
-    
-    Card *card = [self.cards objectAtIndex:indexPath.row];
-    if (![card checkedOut]) {
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CardCell"];
-        UILabel *nameLabel = (UILabel *) [cell viewWithTag:100];
-        nameLabel.text = card.name;
-        UILabel *typeLabel = (UILabel *) [cell viewWithTag:101];
-        typeLabel.text = card.cardType;
-        UIImageView * cardImageView = (UIImageView *) [cell viewWithTag:102];
-        cardImageView.contentMode = UIViewContentModeScaleAspectFill;
-        cardImageView.image = card.cardImage;
-        //cell.accessoryType = UITableViewCellAccessoryCheckmark;
-        
-        return cell;
-
-    }else {
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CheckedOutCell"];
-        UILabel *nameLabel = (UILabel *) [cell viewWithTag:108];
-        nameLabel.text = card.name;
-        UILabel *typeLabel = (UILabel *) [cell viewWithTag:109];
-        typeLabel.text = card.cardType;
-        UIImageView * cardImageView = (UIImageView *) [cell viewWithTag:110];
-        cardImageView.image = card.cardImage;
-        UIImageView * iconImageView = (UIImageView *) [cell viewWithTag:102];
-        iconImageView.image = [UIImage imageNamed:@"checkmark.png"];
-        
-        return cell;
-
-        
-    }
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"IconCell"];
+    Icon *icon = [self.premadeIcons objectAtIndex:indexPath.row];
+    UILabel *iconLabel = (UILabel *) [cell viewWithTag:105];
+    iconLabel.text = icon.iconName;
+    UIImageView * iconImageView = (UIImageView *) [cell viewWithTag:106];
+    iconImageView.image =  [self imageForIcon:icon.iconImageNumber];
     
     
+    // Configure the cell...
     
-    
-    
-    
-  
+    return cell;
 }
 
-- (void)viewWillAppear:(BOOL)animated
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [super viewWillAppear:animated];
-    [self.tableView reloadData];
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    chosenIcon = cell.imageView.image;
     
+    
+    
+    
+}
+
+- (IBAction)savePremadeIcon:(id)sender
+{
+    Icon *icon = [[Icon alloc] init];
+    icon.iconName = @"Nothing";
+    icon.iconImage = chosenIcon;
+    icon.iconImageNumber = 0;
+    
+    
+    TZAddCardViewController *addCardViewController = (TZAddCardViewController *)[self.navigationController.viewControllers objectAtIndex:self.navigationController.viewControllers.count-2];
+    
+    
+    [addCardViewController.iconArray addObject:icon];
+    
+}
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    cell.selectionStyle = UITableViewCellSelectionStyleBlue;
 }
 
 /*

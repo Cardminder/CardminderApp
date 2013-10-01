@@ -12,6 +12,7 @@
 
 @synthesize name;
 @synthesize cardType;
-@synthesize icon;
+@synthesize iconNumber;
+@synthesize checkedOut;
 
 @end

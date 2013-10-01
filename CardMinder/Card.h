@@ -11,7 +11,11 @@
 @interface Card : NSObject
 
 @property NSString *name;
-@property NSString *cardType; 
-@property UIImage *icon;
+@property NSString *cardType;
+@property UIImage *cardImage;
+@property int iconNumber;
+@property BOOL checkedOut;
+@property BOOL premadeIcon;
+@property BOOL pictureTaken;
 
 @end

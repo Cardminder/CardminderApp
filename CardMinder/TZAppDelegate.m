@@ -18,8 +18,8 @@
 {
     // Override point for customization after application launch.
     
-    cards = [NSMutableArray arrayWithCapacity:5];
-    Card *card = [[Card alloc] init];
+    cards = [NSMutableArray arrayWithCapacity:50];
+    /*Card *card = [[Card alloc] init];
     card.name = @"Credit Card";
     card.cardType = @"Discover";
     //card.icon = @"discover.png";
@@ -33,7 +33,7 @@
     card2.name = @"Credit Card";
     card2.cardType = @"Mastercard";
     //card2.icon = 3;
-    [cards addObject:card2];
+    [cards addObject:card2];*/
     
     UINavigationController *navigationController = (UINavigationController *) self.window.rootViewController;
     CardViewController *cardViewController = [[navigationController viewControllers] objectAtIndex:0];
