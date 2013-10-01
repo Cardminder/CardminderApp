@@ -29,6 +29,11 @@
 @synthesize iconView;
 @synthesize iconArray;
 
+////////////////////////////////
+//                            //
+//----- Picker View Code -----//
+//                            //
+////////////////////////////////
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
 {
@@ -63,6 +68,12 @@
     }
 }
 
+/////////////////////////////////
+//                             //
+//----- Image Picker Code -----//
+//                             //
+/////////////////////////////////
+
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     chosenIcon = [info objectForKey:UIImagePickerControllerEditedImage];
@@ -85,6 +96,11 @@
     [picker dismissViewControllerAnimated:YES completion:nil];
 }
 
+/////////////////////////////////
+//                             //
+//----- Action Sheet Code -----//
+//                             //
+/////////////////////////////////
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
@@ -137,11 +153,11 @@
 
 }
 
-- (IBAction)popToRoot:(id)sender {
-    
-    [self.navigationController popToRootViewControllerAnimated:YES]; 
-    
-}
+/////////////////////////
+//                     //
+//----- Save Card -----//
+//                     //
+/////////////////////////
 
 - (IBAction)saveNewCard:(id)sender
 {

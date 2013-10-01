@@ -1,5 +1,5 @@
 //
-//  TZCheckInViewController.h
+//  TZEditCardViewController.h
 //  CardMinder
 //
 //  Created by Zach Burns on 10/1/13.
@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TZCheckInViewController : UIViewController
-@property (strong, nonatomic) IBOutlet UIButton *checkIn;
+@interface TZEditCardViewController : UIViewController
 
 @end

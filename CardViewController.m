@@ -60,19 +60,7 @@
     return [self.cards count];
 }
 
-- (UIImage *)imageForCard:(int)cardType
-{
-    switch (cardType) {
-        case 1:
-            return [UIImage imageNamed:@"visa1.png"];
-        case 2:
-            return [UIImage imageNamed:@"discover.png"];
-        case 3:
-            return [UIImage imageNamed:@"mastercard.png"];
-            
-    }
-    return nil;
-}
+// Allows deletion of cards
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -82,22 +70,9 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-   
-    /*UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CardCell"];
-    Card *card = [self.cards objectAtIndex:indexPath.row];
-    UILabel *nameLabel = (UILabel *) [cell viewWithTag:100];
-    nameLabel.text = card.name;
-    UILabel *typeLabel = (UILabel *) [cell viewWithTag:101];
-    typeLabel.text = card.cardType;
-    UIImageView * cardImageView = (UIImageView *) [cell viewWithTag:102];
-    cardImageView.image = [self imageForCard:card.iconNumber];
-    card.checkedOut = YES;
-    UIImageView *checkedOutView = (UIImageView *) [cell viewWithTag:108];
-    if ([card checkedOut]) {
-        checkedOutView.image = [UIImage imageNamed:@"checkmark.png"];
-    } else {
-        checkedOutView.image = nil;
-    }*/
+    //
+    // Conditionally decide which prototype table cell to display based on BOOL checkedOut
+    //
     
     Card *card = [self.cards objectAtIndex:indexPath.row];
     if (![card checkedOut]) {
@@ -110,7 +85,6 @@
         cardImageView.contentMode = UIViewContentModeScaleAspectFill;
         cardImageView.image = card.cardImage;
 
-        
         return cell;
 
     }else {
@@ -125,17 +99,12 @@
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
         
         return cell;
-
         
     }
-    
-    
-    
-    
-    
-    
-  
+
 }
+
+// Refreshes table data
 
 - (void)viewWillAppear:(BOOL)animated
 {
