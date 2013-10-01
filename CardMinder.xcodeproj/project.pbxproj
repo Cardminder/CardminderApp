@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		94C51F2C17FB3BC500D3D7B5 /* TZCheckInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C51F2B17FB3BC500D3D7B5 /* TZCheckInViewController.m */; };
 		94D2754817F13DCF00D56D3C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D2754717F13DCF00D56D3C /* Foundation.framework */; };
 		94D2754A17F13DCF00D56D3C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D2754917F13DCF00D56D3C /* CoreGraphics.framework */; };
 		94D2754C17F13DCF00D56D3C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D2754B17F13DCF00D56D3C /* UIKit.framework */; };
@@ -45,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		94C51F2A17FB3BC500D3D7B5 /* TZCheckInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZCheckInViewController.h; sourceTree = "<group>"; };
+		94C51F2B17FB3BC500D3D7B5 /* TZCheckInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZCheckInViewController.m; sourceTree = "<group>"; };
 		94D2754417F13DCF00D56D3C /* CardMinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardMinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94D2754717F13DCF00D56D3C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		94D2754917F13DCF00D56D3C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -150,6 +153,8 @@
 				94D2755617F13DCF00D56D3C /* TZAppDelegate.h */,
 				94D2755717F13DCF00D56D3C /* TZAppDelegate.m */,
 				94D2755917F13DCF00D56D3C /* Main.storyboard */,
+				94C51F2A17FB3BC500D3D7B5 /* TZCheckInViewController.h */,
+				94C51F2B17FB3BC500D3D7B5 /* TZCheckInViewController.m */,
 				94FE61A417F8C9830068C4CD /* TZIconTableViewController.h */,
 				94FE61A517F8C9830068C4CD /* TZIconTableViewController.m */,
 				94FE61A717F8D0D40068C4CD /* Icon.h */,
@@ -324,6 +329,7 @@
 				94F0E2CF17FA6605000EBC8F /* TZCheckOutViewController.m in Sources */,
 				94D2759417F359F000D56D3C /* TZAddCardViewController.m in Sources */,
 				94FE61A617F8C9830068C4CD /* TZIconTableViewController.m in Sources */,
+				94C51F2C17FB3BC500D3D7B5 /* TZCheckInViewController.m in Sources */,
 				94D2755817F13DCF00D56D3C /* TZAppDelegate.m in Sources */,
 				94D2755417F13DCF00D56D3C /* main.m in Sources */,
 				94D2755E17F13DCF00D56D3C /* TZViewController.m in Sources */,

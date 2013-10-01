@@ -88,26 +88,27 @@
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    NSString *buttonTitle = [actionSheet buttonTitleAtIndex:buttonIndex];
-    if ([buttonTitle isEqualToString:@"Choose Existing Icon"])
+    //NSString *buttonTitle = [actionSheet buttonTitleAtIndex:buttonIndex];
+    if (buttonIndex == 0)
     {
-        mediaPicker = [[UIImagePickerController alloc] init];
+        /*mediaPicker = [[UIImagePickerController alloc] init];
         mediaPicker.delegate = self;
         mediaPicker.allowsEditing = YES;
         mediaPicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
 
         premade = YES;
         
-        [self presentViewController:mediaPicker animated:YES completion:nil];
+        [self presentViewController:mediaPicker animated:YES completion:nil];*/
         
        
         
-        //TZIconTableViewController *iconViewController = [[TZIconTableViewController alloc] init];
+        TZIconTableViewController *iconViewController = [[TZIconTableViewController alloc] init];
+        [self presentViewController:iconViewController animated:YES completion:nil];
         
         
 
     }
-    if ([buttonTitle isEqualToString:@"Take Photo"])
+    if (buttonIndex == 1)
     {
         if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
             mediaPicker = [[UIImagePickerController alloc] init];

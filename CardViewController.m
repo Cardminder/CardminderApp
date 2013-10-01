@@ -109,20 +109,20 @@
         UIImageView * cardImageView = (UIImageView *) [cell viewWithTag:102];
         cardImageView.contentMode = UIViewContentModeScaleAspectFill;
         cardImageView.image = card.cardImage;
-        //cell.accessoryType = UITableViewCellAccessoryCheckmark;
+
         
         return cell;
 
     }else {
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CheckedOutCell"];
-        UILabel *nameLabel = (UILabel *) [cell viewWithTag:108];
+        UILabel *nameLabel = (UILabel *) [cell viewWithTag:103];
         nameLabel.text = card.name;
-        UILabel *typeLabel = (UILabel *) [cell viewWithTag:109];
+        UILabel *typeLabel = (UILabel *) [cell viewWithTag:104];
         typeLabel.text = card.cardType;
-        UIImageView * cardImageView = (UIImageView *) [cell viewWithTag:110];
+        UIImageView * cardImageView = (UIImageView *) [cell viewWithTag:105];
         cardImageView.image = card.cardImage;
-        UIImageView * iconImageView = (UIImageView *) [cell viewWithTag:102];
-        iconImageView.image = [UIImage imageNamed:@"checkmark.png"];
+        cardImageView.contentMode = UIViewContentModeScaleAspectFill;
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
         
         return cell;
 
