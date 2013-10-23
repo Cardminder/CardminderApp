@@ -6,7 +6,8 @@
 //  Copyright (c) 2013 Burnspur. All rights reserved.
 //
 
-#import "Card.h"
+#import "CardData.h"
+#import "CardDoc.h"
 #import "CardViewController.h"
 #import "TZAddCardViewController.h"
 #import "TZIconTableViewController.h"
@@ -17,8 +18,6 @@
     IBOutlet UIImageView *iconView;
     UIImage *chosenIcon;
     NSString *cardTypeString;
-    BOOL premade;
-    BOOL picture;
 }
 - (IBAction)showActionSheet:(id)sender;
 
@@ -28,6 +27,7 @@
 
 @synthesize iconView;
 @synthesize iconArray;
+@synthesize cardDoc = _cardDoc;
 
 ////////////////////////////////
 //                            //
@@ -86,7 +86,7 @@
         self.iconView.image = chosenIcon;
     }
     
-    picture = YES;
+
     
     [picker dismissViewControllerAnimated:YES completion:nil];
 }
@@ -134,7 +134,7 @@
 
         }
         
-        picture = YES;
+        //picture = YES;
         
         [self presentViewController:mediaPicker animated:YES completion:nil];
 
@@ -163,17 +163,12 @@
 {
     NSString *cardName = self.nameField.text;
     
-    Card *newCard = [[Card alloc] init];
-    newCard.name = cardName;
-    newCard.cardImage = chosenIcon;
-    newCard.cardType = cardTypeString;
-    if (premade) {
-        newCard.premadeIcon = YES;
-        newCard.pictureTaken = NO;
-    } if (picture) {
-        newCard.pictureTaken = YES;
-        newCard.premadeIcon = NO;
-    }
+    _cardDoc.data.name = cardName;
+ 
+    
+    CardDoc *newCard = [[CardDoc alloc] initWithName:cardName type:cardTypeString _Bool:NO image:chosenIcon];
+ 
+    [_cardDoc saveData];
     
     CardViewController *cardViewController = (CardViewController *)[self.navigationController.viewControllers objectAtIndex:self.navigationController.viewControllers.count-2];
     
@@ -198,6 +193,7 @@
 	// Do any additional setup after loading the view.
     
     self.cardTypeArray = [[NSArray alloc] initWithObjects:@"Credit Card", @"Debit Card", @"Gift Card", nil];
+    //[self setDelegate:self];
     
 }
 

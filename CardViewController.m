@@ -6,8 +6,10 @@
 //  Copyright (c) 2013 Burnspur. All rights reserved.
 //
 
+#import "TZAddCardViewController.h"
 #import "CardViewController.h"
-#import "Card.h"
+#import "CardData.h"
+#import "CardDoc.h"
 
 @interface CardViewController ()
 
@@ -15,8 +17,7 @@
 
 @implementation CardViewController
 
-@synthesize cards;
-@synthesize checkedOut;
+@synthesize cards = _cards;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -30,6 +31,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSLog(@"Items > %@", self.cards);
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -64,7 +66,10 @@
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [cards removeObjectAtIndex:indexPath.row];
+    CardDoc *doc = [_cards objectAtIndex:indexPath.row];
+    [doc deleteDoc];
+    
+    [_cards removeObjectAtIndex:indexPath.row];
     [tableView reloadData];
 }
 
@@ -74,13 +79,13 @@
     // Conditionally decide which prototype table cell to display based on BOOL checkedOut
     //
     
-    Card *card = [self.cards objectAtIndex:indexPath.row];
-    if (![card checkedOut]) {
+    CardDoc *card = [self.cards objectAtIndex:indexPath.row];
+    if (![card.data checkedOut]) {
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CardCell"];
         UILabel *nameLabel = (UILabel *) [cell viewWithTag:100];
-        nameLabel.text = card.name;
+        nameLabel.text = card.data.name;
         UILabel *typeLabel = (UILabel *) [cell viewWithTag:101];
-        typeLabel.text = card.cardType;
+        typeLabel.text = card.data.cardType;
         UIImageView * cardImageView = (UIImageView *) [cell viewWithTag:102];
         cardImageView.contentMode = UIViewContentModeScaleAspectFill;
         cardImageView.image = card.cardImage;
@@ -90,9 +95,9 @@
     }else {
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CheckedOutCell"];
         UILabel *nameLabel = (UILabel *) [cell viewWithTag:103];
-        nameLabel.text = card.name;
+        nameLabel.text = card.data.name;
         UILabel *typeLabel = (UILabel *) [cell viewWithTag:104];
-        typeLabel.text = card.cardType;
+        typeLabel.text = card.data.cardType;
         UIImageView * cardImageView = (UIImageView *) [cell viewWithTag:105];
         cardImageView.image = card.cardImage;
         cardImageView.contentMode = UIViewContentModeScaleAspectFill;

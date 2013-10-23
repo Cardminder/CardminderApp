@@ -7,8 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CardDoc.h"
+
+
 
 @interface TZAddCardViewController : UIViewController <UITextFieldDelegate, UIActionSheetDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIPickerViewDataSource,UIPickerViewDelegate>
+
+@property CardDoc *cardDoc;
 
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
 @property (weak, nonatomic) IBOutlet UIButton *selectIcon;
@@ -20,6 +25,5 @@
 @property (strong, nonatomic) NSArray *cardTypeArray;
 
 @property (strong, nonatomic) NSMutableArray *iconArray;
-
 
 @end

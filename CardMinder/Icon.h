@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Icon : NSObject
+@interface Icon : NSObject <NSCoding>
 
 @property NSString *iconName;
 @property int iconImageNumber;

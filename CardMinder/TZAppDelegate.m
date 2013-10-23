@@ -7,18 +7,26 @@
 //
 
 #import "TZAppDelegate.h"
-#import "Card.h"
+#import "CardData.h"
+#import "CardDoc.h"
+#import "CardDatabase.h"
 #import "CardViewController.h"
 
 @implementation TZAppDelegate {
-    NSMutableArray *cards;
+    //NSMutableArray *cards;
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
     
-    cards = [NSMutableArray arrayWithCapacity:50];
+    NSMutableArray *loadedCards = [CardDatabase loadCardDocs];
+    UINavigationController *navigationController = (UINavigationController *) self.window.rootViewController;
+    CardViewController *cardViewController = [[navigationController viewControllers] objectAtIndex:0];
+    cardViewController.cards = loadedCards;
+    
+    
+    //cards = [NSMutableArray arrayWithCapacity:50];
     /*Card *card = [[Card alloc] init];
     card.name = @"Credit Card";
     card.cardType = @"Discover";
@@ -35,9 +43,9 @@
     //card2.icon = 3;
     [cards addObject:card2];*/
     
-    UINavigationController *navigationController = (UINavigationController *) self.window.rootViewController;
+    /*UINavigationController *navigationController = (UINavigationController *) self.window.rootViewController;
     CardViewController *cardViewController = [[navigationController viewControllers] objectAtIndex:0];
-    cardViewController.cards = cards;
+    cardViewController.cards = cards;*/
     
     
     return YES;

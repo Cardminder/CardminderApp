@@ -7,7 +7,8 @@
 //
 
 #import "TZCheckInViewController.h"
-#import "Card.h"
+#import "CardData.h"
+#import "CardDoc.h"
 #import "CardViewController.h"
 
 @interface TZCheckInViewController ()
@@ -39,11 +40,11 @@
     CardViewController *cardViewController = (CardViewController *)[self.navigationController.viewControllers objectAtIndex:self.navigationController.viewControllers.count-2];
     
     NSIndexPath *indexPath = [cardViewController.tableView indexPathForSelectedRow];
-    Card *card = [cardViewController.cards objectAtIndex:indexPath.row];
+    CardDoc *card = [cardViewController.cards objectAtIndex:indexPath.row];
     UILabel *checkedOutCardName = (UILabel *) [self.view viewWithTag:109];
-    checkedOutCardName.text = card.name;
+    checkedOutCardName.text = card.data.name;
     UILabel *checkedOutCardType = (UILabel *) [self.view viewWithTag:110];
-    checkedOutCardType.text = card.cardType;
+    checkedOutCardType.text = card.data.cardType;
     UIImageView *checkedOutCardImage = (UIImageView *) [self.view viewWithTag:111];
     checkedOutCardImage.image = card.cardImage;
 }
@@ -65,8 +66,8 @@
     CardViewController *cardViewController = (CardViewController *)[self.navigationController.viewControllers objectAtIndex:self.navigationController.viewControllers.count-2];
     
     NSIndexPath *indexPath = [cardViewController.tableView indexPathForSelectedRow];
-    Card *card = [cardViewController.cards objectAtIndex:indexPath.row];
-    card.checkedOut = NO;
+    CardDoc *card = [cardViewController.cards objectAtIndex:indexPath.row];
+    card.data.checkedOut = NO;
     
     [self.navigationController popToRootViewControllerAnimated:YES];
 

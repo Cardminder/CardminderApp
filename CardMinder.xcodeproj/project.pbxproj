@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		94BC25B81814B14F00DBCC4A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 94BC25B61814B14F00DBCC4A /* Default.png */; };
+		94BC25B91814B14F00DBCC4A /* 111Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 94BC25B71814B14F00DBCC4A /* 111Default@2x.png */; };
+		94BC25BB1814B4EA00DBCC4A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 94BC25BA1814B4EA00DBCC4A /* Default@2x.png */; };
 		94C51F2C17FB3BC500D3D7B5 /* TZCheckInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C51F2B17FB3BC500D3D7B5 /* TZCheckInViewController.m */; };
 		94C51F2F17FB407500D3D7B5 /* TZEditCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C51F2E17FB407500D3D7B5 /* TZEditCardViewController.m */; };
 		94C51F3117FB4C3000D3D7B5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94C51F3017FB4C3000D3D7B5 /* MapKit.framework */; };
@@ -25,13 +28,15 @@
 		94D2757117F13DCF00D56D3C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 94D2756F17F13DCF00D56D3C /* InfoPlist.strings */; };
 		94D2757317F13DCF00D56D3C /* CardMinderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D2757217F13DCF00D56D3C /* CardMinderTests.m */; };
 		94D2758117F209EA00D56D3C /* CardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D2758017F209EA00D56D3C /* CardViewController.m */; };
-		94D2758417F20C4100D56D3C /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D2758317F20C4100D56D3C /* Card.m */; };
+		94D2758417F20C4100D56D3C /* CardData.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D2758317F20C4100D56D3C /* CardData.m */; };
 		94D2758A17F22DC400D56D3C /* visa1.png in Resources */ = {isa = PBXBuildFile; fileRef = 94D2758917F22DC400D56D3C /* visa1.png */; };
 		94D2758F17F22F7C00D56D3C /* discover.png in Resources */ = {isa = PBXBuildFile; fileRef = 94D2758D17F22F7C00D56D3C /* discover.png */; };
 		94D2759017F22F7C00D56D3C /* mastercard.png in Resources */ = {isa = PBXBuildFile; fileRef = 94D2758E17F22F7C00D56D3C /* mastercard.png */; };
 		94D2759417F359F000D56D3C /* TZAddCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D2759317F359F000D56D3C /* TZAddCardViewController.m */; };
 		94F0E2CC17FA04AF000EBC8F /* checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 94F0E2CB17FA04AF000EBC8F /* checkmark.png */; };
 		94F0E2CF17FA6605000EBC8F /* TZCheckOutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F0E2CE17FA6605000EBC8F /* TZCheckOutViewController.m */; };
+		94FB129317FCAAFF0028E893 /* CardDoc.m in Sources */ = {isa = PBXBuildFile; fileRef = 94FB129217FCAAFF0028E893 /* CardDoc.m */; };
+		94FB129617FCAB230028E893 /* CardDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 94FB129517FCAB230028E893 /* CardDatabase.m */; };
 		94FE61A217F640020068C4CD /* TZIconCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94FE61A117F640020068C4CD /* TZIconCollectionViewController.m */; };
 		94FE61A617F8C9830068C4CD /* TZIconTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94FE61A517F8C9830068C4CD /* TZIconTableViewController.m */; };
 		94FE61A917F8D0D40068C4CD /* Icon.m in Sources */ = {isa = PBXBuildFile; fileRef = 94FE61A817F8D0D40068C4CD /* Icon.m */; };
@@ -48,6 +53,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		94BC25B61814B14F00DBCC4A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../../Pictures/Default.png; sourceTree = "<group>"; };
+		94BC25B71814B14F00DBCC4A /* 111Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "111Default@2x.png"; path = "../../../Pictures/111Default@2x.png"; sourceTree = "<group>"; };
+		94BC25BA1814B4EA00DBCC4A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../../Pictures/Default@2x.png"; sourceTree = "<group>"; };
 		94C51F2A17FB3BC500D3D7B5 /* TZCheckInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZCheckInViewController.h; sourceTree = "<group>"; };
 		94C51F2B17FB3BC500D3D7B5 /* TZCheckInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZCheckInViewController.m; sourceTree = "<group>"; };
 		94C51F2D17FB407500D3D7B5 /* TZEditCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZEditCardViewController.h; sourceTree = "<group>"; };
@@ -74,8 +82,8 @@
 		94D2757217F13DCF00D56D3C /* CardMinderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CardMinderTests.m; sourceTree = "<group>"; };
 		94D2757F17F209EA00D56D3C /* CardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardViewController.h; path = ../CardViewController.h; sourceTree = "<group>"; };
 		94D2758017F209EA00D56D3C /* CardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CardViewController.m; path = ../CardViewController.m; sourceTree = "<group>"; };
-		94D2758217F20C4100D56D3C /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
-		94D2758317F20C4100D56D3C /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
+		94D2758217F20C4100D56D3C /* CardData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardData.h; sourceTree = "<group>"; };
+		94D2758317F20C4100D56D3C /* CardData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardData.m; sourceTree = "<group>"; };
 		94D2758917F22DC400D56D3C /* visa1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = visa1.png; sourceTree = "<group>"; };
 		94D2758D17F22F7C00D56D3C /* discover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = discover.png; sourceTree = "<group>"; };
 		94D2758E17F22F7C00D56D3C /* mastercard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mastercard.png; sourceTree = "<group>"; };
@@ -84,6 +92,10 @@
 		94F0E2CB17FA04AF000EBC8F /* checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkmark.png; sourceTree = "<group>"; };
 		94F0E2CD17FA6605000EBC8F /* TZCheckOutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZCheckOutViewController.h; sourceTree = "<group>"; };
 		94F0E2CE17FA6605000EBC8F /* TZCheckOutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZCheckOutViewController.m; sourceTree = "<group>"; };
+		94FB129117FCAAFF0028E893 /* CardDoc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardDoc.h; sourceTree = "<group>"; };
+		94FB129217FCAAFF0028E893 /* CardDoc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardDoc.m; sourceTree = "<group>"; };
+		94FB129417FCAB230028E893 /* CardDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardDatabase.h; sourceTree = "<group>"; };
+		94FB129517FCAB230028E893 /* CardDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardDatabase.m; sourceTree = "<group>"; };
 		94FE61A017F640020068C4CD /* TZIconCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZIconCollectionViewController.h; sourceTree = "<group>"; };
 		94FE61A117F640020068C4CD /* TZIconCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZIconCollectionViewController.m; sourceTree = "<group>"; };
 		94FE61A417F8C9830068C4CD /* TZIconTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZIconTableViewController.h; sourceTree = "<group>"; };
@@ -120,6 +132,8 @@
 		94D2753B17F13DCF00D56D3C = {
 			isa = PBXGroup;
 			children = (
+				94BC25B61814B14F00DBCC4A /* Default.png */,
+				94BC25BA1814B4EA00DBCC4A /* Default@2x.png */,
 				94D2754D17F13DCF00D56D3C /* CardMinder */,
 				94D2756C17F13DCF00D56D3C /* CardMinderTests */,
 				94D2754617F13DCF00D56D3C /* Frameworks */,
@@ -155,13 +169,18 @@
 				94D2759117F356FA00D56D3C /* images */,
 				94D2758D17F22F7C00D56D3C /* discover.png */,
 				94F0E2CB17FA04AF000EBC8F /* checkmark.png */,
+				94BC25B71814B14F00DBCC4A /* 111Default@2x.png */,
 				94D2758E17F22F7C00D56D3C /* mastercard.png */,
 				94D2758917F22DC400D56D3C /* visa1.png */,
 				94D2755917F13DCF00D56D3C /* Main.storyboard */,
 				94FE61A717F8D0D40068C4CD /* Icon.h */,
 				94FE61A817F8D0D40068C4CD /* Icon.m */,
-				94D2758217F20C4100D56D3C /* Card.h */,
-				94D2758317F20C4100D56D3C /* Card.m */,
+				94D2758217F20C4100D56D3C /* CardData.h */,
+				94D2758317F20C4100D56D3C /* CardData.m */,
+				94FB129117FCAAFF0028E893 /* CardDoc.h */,
+				94FB129217FCAAFF0028E893 /* CardDoc.m */,
+				94FB129417FCAB230028E893 /* CardDatabase.h */,
+				94FB129517FCAB230028E893 /* CardDatabase.m */,
 				94FE61A417F8C9830068C4CD /* TZIconTableViewController.h */,
 				94FE61A517F8C9830068C4CD /* TZIconTableViewController.m */,
 				94F0E2CD17FA6605000EBC8F /* TZCheckOutViewController.h */,
@@ -309,6 +328,9 @@
 				94D2756017F13DCF00D56D3C /* Images.xcassets in Resources */,
 				94D2755217F13DCF00D56D3C /* InfoPlist.strings in Resources */,
 				94D2758A17F22DC400D56D3C /* visa1.png in Resources */,
+				94BC25B91814B14F00DBCC4A /* 111Default@2x.png in Resources */,
+				94BC25BB1814B4EA00DBCC4A /* Default@2x.png in Resources */,
+				94BC25B81814B14F00DBCC4A /* Default.png in Resources */,
 				94F0E2CC17FA04AF000EBC8F /* checkmark.png in Resources */,
 				94D2759017F22F7C00D56D3C /* mastercard.png in Resources */,
 				94D2758F17F22F7C00D56D3C /* discover.png in Resources */,
@@ -332,9 +354,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				94FE61A917F8D0D40068C4CD /* Icon.m in Sources */,
-				94D2758417F20C4100D56D3C /* Card.m in Sources */,
+				94D2758417F20C4100D56D3C /* CardData.m in Sources */,
 				94D2758117F209EA00D56D3C /* CardViewController.m in Sources */,
 				94FE61A217F640020068C4CD /* TZIconCollectionViewController.m in Sources */,
+				94FB129617FCAB230028E893 /* CardDatabase.m in Sources */,
 				94F0E2CF17FA6605000EBC8F /* TZCheckOutViewController.m in Sources */,
 				94D2759417F359F000D56D3C /* TZAddCardViewController.m in Sources */,
 				94C51F2F17FB407500D3D7B5 /* TZEditCardViewController.m in Sources */,
@@ -343,6 +366,7 @@
 				94D2755817F13DCF00D56D3C /* TZAppDelegate.m in Sources */,
 				94D2755417F13DCF00D56D3C /* main.m in Sources */,
 				94D2755E17F13DCF00D56D3C /* TZViewController.m in Sources */,
+				94FB129317FCAAFF0028E893 /* CardDoc.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,6 +496,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CardMinder/CardMinder-Prefix.pch";
 				INFOPLIST_FILE = "CardMinder/CardMinder-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -485,6 +510,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CardMinder/CardMinder-Prefix.pch";
 				INFOPLIST_FILE = "CardMinder/CardMinder-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

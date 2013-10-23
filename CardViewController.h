@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TZAddCardViewController.h"
 
 @interface CardViewController : UITableViewController
 
 @property (nonatomic, retain) NSMutableArray *cards;
-@property BOOL checkedOut;
 
 @end

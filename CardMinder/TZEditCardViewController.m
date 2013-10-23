@@ -8,7 +8,8 @@
 
 #import "TZEditCardViewController.h"
 #import "CardViewController.h"
-#import "Card.h"
+#import "CardData.h"
+#import "CardDoc.h"
 
 @interface TZEditCardViewController ()
 
@@ -33,11 +34,11 @@
     CardViewController *cardViewController = (CardViewController *)[self.navigationController.viewControllers objectAtIndex:self.navigationController.viewControllers.count-3];
     
     NSIndexPath *indexPath = [cardViewController.tableView indexPathForSelectedRow];
-    Card *card = [cardViewController.cards objectAtIndex:indexPath.row];
+    CardDoc *card = [cardViewController.cards objectAtIndex:indexPath.row];
     UILabel *selectedCardName = (UILabel *) [self.view viewWithTag:112];
-    selectedCardName.text = card.name;
+    selectedCardName.text = card.data.name;
     UILabel *selectedCardType = (UILabel *) [self.view viewWithTag:113];
-    selectedCardType.text = card.cardType;
+    selectedCardType.text = card.data.cardType;
     UIImageView *selectedCardImage = (UIImageView *) [self.view viewWithTag:114];
     selectedCardImage.image = card.cardImage;
 
